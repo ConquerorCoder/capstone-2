@@ -34,12 +34,10 @@ public class UserInterface {
                 case 2 -> addGarlicKnots();
                 case 3 -> addDrink();
                 case 4 -> order.displayOrder();
-                case 5 -> {
-                    System.out.printf("\nTotal: $%.2f\n", order.getTotalPrice());
-                    System.out.println("Thank you for ordering, " + order.getCustomerName() + "!");
-                }
-                case 0 -> System.out.println("Goodbye, " + order.getCustomerName() + "!");
-                default -> System.out.println("Invalid choice. Try again.");
+                case 5 -> checkout();
+                case 0 -> System.out.printf("\nTotal: $%.2f\n", order.getTotalPrice());
+                default ->  System.out.println("Thank you for ordering, " + order.getCustomerName() + "!");
+
             }
         } while (choice != 0);
     }
@@ -103,4 +101,18 @@ public class UserInterface {
 
             System.out.println("Drink added!");
     }
+    private void checkout() {
+        System.out.println("CHECKOUT RECEIPT: ");
+
+        order.displayOrder();
+
+        System.out.println("------------------------------------");
+        System.out.printf("TOTAL: $%.2f\n", order.getTotalPrice());
+        System.out.println("====================================");
+        System.out.println("Thank you for ordering, " + order.getCustomerName() + "!");
+
+        ReceiptWriter writer = new ReceiptWriter();
+        writer.saveReceipt(order);
+    }
 }
+
