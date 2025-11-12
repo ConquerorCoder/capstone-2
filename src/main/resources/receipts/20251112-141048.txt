@@ -1,0 +1,13 @@
+Papa Christians Pizzeria
+--------------------------
+Customer: Dave
+Date/Time: 2025-11-12 14:10:48
+------------------------------------
+medium stuffed crust Pizza     $ 11.90
+1 Garlic Knots                 $  4.99
+medium minute maid lemonade Drink $  2.40
+------------------------------------
+TOTAL:                         $ 19.29
+====================================
+   Thank you for your order!
+====================================
