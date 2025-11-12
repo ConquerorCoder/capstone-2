@@ -4,11 +4,9 @@ package com.pluralsight;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-       Drink drinky = new Drink("small","Coke");
-
-        System.out.println(drinky);
-
-        double total = drinky.getPrice();
-        System.out.println(drinky.getPrice());
+        Pizza pizza = new Pizza("small","stuffed crust");
+        pizza.setStuffedCrust(true);
+        System.out.println(pizza);
+        System.out.println(pizza.getPrice());
     }
 }
