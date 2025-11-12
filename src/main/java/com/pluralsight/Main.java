@@ -4,8 +4,18 @@ package com.pluralsight;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        GarlicKnots garlicKnots =  new GarlicKnots(3);
-        System.out.println(garlicKnots);
-        System.out.println(garlicKnots.getPrice());
+       Order order = new Order("Christian");
+
+       Pizza pizza = new Pizza("medium","regular");
+       Drink drink = new Drink("medium","coke");
+       GarlicKnots garlicKnots = new GarlicKnots(2);
+
+       order.addItem(pizza);
+       order.addItem(drink);
+       order.addItem(garlicKnots);
+
+       order.displayOrder();
+
+
     }
 }
