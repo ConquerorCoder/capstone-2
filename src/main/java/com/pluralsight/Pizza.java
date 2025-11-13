@@ -36,6 +36,28 @@ public class Pizza implements OrderItem {
             toppings.add(topping);
         }
     }
+    public void removeTopping(String topping) {
+        for (int i = 0; i < meats.size(); i++) {
+            if (meats.get(i).equalsIgnoreCase(topping)) {
+                meats.remove(i);
+                i--;
+            }
+        }
+        for (int i = 0; i < cheeses.size(); i++) {
+            if (cheeses.get(i).equalsIgnoreCase(topping)) {
+                cheeses.remove(i);
+                i--;
+            }
+        }
+        for (int i = 0; i < toppings.size(); i++) {
+            if (toppings.get(i).equalsIgnoreCase(topping)) {
+                toppings.remove(i);
+                i--;
+            }
+        }
+    }
+
+
     public void setStuffedCrust(boolean stuffedCrust) {
         this.stuffedCrust = stuffedCrust;
     }
