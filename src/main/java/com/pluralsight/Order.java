@@ -32,7 +32,7 @@ public class Order {
         for (OrderItem item : items) {
             System.out.println("- " + item.getDescription());
         }
-        System.out.println("Total: $" + getTotalPrice());
+        System.out.printf("Total: $%.2f\n", getTotalPrice());
     }
 
     public ArrayList<OrderItem> getItems() {
