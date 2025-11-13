@@ -79,6 +79,14 @@ public class UserInterface {
             SpecialtyPizza specialty = new SpecialtyPizza(name, size, crust);
             order.addPizza(specialty);
 
+            System.out.print("Would you like to customize it? (yes/no): ");
+            String customize = scanner.nextLine();
+
+            if (customize.equalsIgnoreCase("yes")) {
+                customizePizza(specialty);
+            }
+
+
             System.out.println(name + " pizza added!");
         }
         else if (choice == 2) {
@@ -109,6 +117,29 @@ public class UserInterface {
             System.out.println("Custom pizza added!");
         }
     }
+    private void customizePizza(Pizza pizza) {
+        String action;
+        do {
+            System.out.println("Would you like to add or remove a topping?");
+            System.out.print("Type 'add', 'remove', or 'ok' to finish: ");
+            action = scanner.nextLine();
+
+
+            if (action.equalsIgnoreCase("add")) {
+                System.out.print("Enter topping to add: ");
+                String topping = scanner.nextLine();
+                pizza.addTopping(topping);
+                System.out.println(topping + " added!");
+            }
+            else if (action.equalsIgnoreCase("remove")) {
+                System.out.print("Enter topping to remove: ");
+                String topping = scanner.nextLine();
+                pizza.removeTopping(topping);
+                System.out.println(topping + " removed!");
+            }
+        } while (!action.equalsIgnoreCase("ok"));
+    }
+
     private void addGarlicKnots() {
         System.out.print("Enter quantity: ");
         int qty = getIntInput();
