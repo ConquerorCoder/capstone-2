@@ -1,0 +1,12 @@
+Papa Christians Pizzeria
+--------------------------
+Customer: Sasha
+Date/Time: 2025-11-13 14:35:53
+------------------------------------
+Meat Lovers (medium thin crust pizza with Pepperoni, Sausage, Ham, Bacon, Mozzarella, Marinara) $ 22.90
+medium Lemonade Drink          $  2.40
+------------------------------------
+TOTAL:                         $ 25.30
+====================================
+   Thank you for your order!
+====================================

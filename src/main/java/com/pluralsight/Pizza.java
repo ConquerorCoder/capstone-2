@@ -20,7 +20,6 @@ public class Pizza implements OrderItem {
     }
 
     public void addTopping(String topping) {
-
         String lower = topping.toLowerCase();
 
         if (lower.contains("pepperoni") || lower.contains("sausage") ||
@@ -37,7 +36,6 @@ public class Pizza implements OrderItem {
             toppings.add(topping);
         }
     }
-
     public void setStuffedCrust(boolean stuffedCrust) {
         this.stuffedCrust = stuffedCrust;
     }

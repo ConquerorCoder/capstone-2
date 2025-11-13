@@ -53,36 +53,62 @@ public class UserInterface {
     }
 
     private void addPizza() {
-        System.out.print("Enter size (small, medium, large): ");
-        String size = scanner.nextLine();
+        System.out.println("Would you like:");
+        System.out.println("1) Specialty Pizza");
+        System.out.println("2) Custom Pizza");
+        int choice = getIntInput();
 
-        System.out.print("Enter crust type: ");
-        String crust = scanner.nextLine();
+        if (choice == 1) {
+            System.out.println("Choose a Specialty Pizza:");
+            System.out.println("1) Margherita");
+            System.out.println("2) Veggie");
+            System.out.println("3) Meat Lovers");
+            int typeChoice = getIntInput();
 
-        Pizza pizza = new Pizza(size, crust);
+            String name;
+            if (typeChoice == 1) name = "Margherita";
+            else if (typeChoice == 2) name = "Veggie";
+            else name = "Meat Lovers";
 
-        System.out.print("Would you like stuffed crust? (yes/no): ");
-        String stuffed = scanner.nextLine();
-        if (stuffed.equalsIgnoreCase("yes")) {
-            pizza.setStuffedCrust(true);
+            System.out.print("Enter size (small, medium, large): ");
+            String size = scanner.nextLine();
+
+            System.out.print("Enter crust type: ");
+            String crust = scanner.nextLine();
+
+            SpecialtyPizza specialty = new SpecialtyPizza(name, size, crust);
+            order.addPizza(specialty);
+
+            System.out.println(name + " pizza added!");
         }
+        else if (choice == 2) {
+            System.out.print("Enter size (small, medium, large): ");
+            String size = scanner.nextLine();
 
-        String topping;
-        do {
-            System.out.print("Add Topping(meat, cheese, veggies) type in 'finished' when your done: ");
-            topping = scanner.nextLine();
-            if (!topping.equalsIgnoreCase("finished")) {
-                pizza.addTopping(topping);
+            System.out.print("Enter crust type: ");
+            String crust = scanner.nextLine();
+
+            CustomPizza pizza = new CustomPizza(size, crust);
+
+            System.out.print("Would you like stuffed crust? (yes/no): ");
+            String stuffed = scanner.nextLine();
+            if (stuffed.equalsIgnoreCase("yes")) {
+                pizza.setStuffedCrust(true);
             }
-        } while (!topping.equalsIgnoreCase("finished"));
-        System.out.print("Enter select sauce: ");
-        String s = scanner.nextLine();
 
+            String topping;
+            do {
+                System.out.print("Add topping (or type 'ok'): ");
+                topping = scanner.nextLine();
+                if (!topping.equalsIgnoreCase("ok")) {
+                    pizza.addTopping(topping);
+                }
+            } while (!topping.equalsIgnoreCase("ok"));
 
-        order.addPizza(pizza);
-        System.out.println("Pizza added!");
+            order.addPizza(pizza);
+            System.out.println("Custom pizza added!");
+        }
     }
-
     private void addGarlicKnots() {
         System.out.print("Enter quantity: ");
         int qty = getIntInput();
