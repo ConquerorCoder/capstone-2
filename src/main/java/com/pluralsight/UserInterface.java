@@ -69,12 +69,15 @@ public class UserInterface {
 
         String topping;
         do {
-            System.out.print("Add topping (or type 'done'): ");
+            System.out.print("Add Topping(meat, cheese, veggies) type in 'finished' when your done: ");
             topping = scanner.nextLine();
-            if (!topping.equalsIgnoreCase("done")) {
+            if (!topping.equalsIgnoreCase("finished")) {
                 pizza.addTopping(topping);
             }
-        } while (!topping.equalsIgnoreCase("done"));
+        } while (!topping.equalsIgnoreCase("finished"));
+        System.out.print("Enter select sauce: ");
+        String s = scanner.nextLine();
+
 
         order.addPizza(pizza);
         System.out.println("Pizza added!");
