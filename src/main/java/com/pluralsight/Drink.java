@@ -1,8 +1,8 @@
 package com.pluralsight;
 
 public class Drink implements OrderItem {
-private String size;
-private String flavor;
+private final String size;
+private final String flavor;
 
     public Drink(String size, String flavor) {
         this.size = size;

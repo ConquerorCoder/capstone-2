@@ -103,6 +103,63 @@ Each specialty pizza has its own **extraCharge**, added to the final price.
 <img src="Images/Screenshot 2025-11-13 at 11.30.02 PM.png" style="height: 220px; width: 600px" >
 
 ---
+
+## ⭐ Interesting Code Snippet: Pizza Pricing Logic
+
+This method is one of the most challenging and interesting pieces of the project. It handles:
+
+- Base price by pizza size
+- Stuffed crust surcharge
+- Specialty pizza surcharge
+- Free regular toppings (first 3)
+- Premium topping charges
+- Final rounding for currency
+
+```java
+public double getPrice() {
+        double price = 0.0;
+        if (size.equalsIgnoreCase("small")) {
+            price = 7.40;
+        }
+        else if (size.equalsIgnoreCase("medium")) {
+            price = 9.40;
+        }
+        else if (size.equalsIgnoreCase("large")) {
+            price = 12.33;
+        }
+
+        price += toppings.size() * 1.00;
+
+        if (stuffedCrust) {
+            price += 1.50;
+        }
+
+        double meatPrice = 0.0;
+        if (size.equalsIgnoreCase("small")) {
+            meatPrice = 1.00;
+        } else if (size.equalsIgnoreCase("medium")) {
+            meatPrice = 2.00;
+        } else if (size.equalsIgnoreCase("large")) {
+            meatPrice = 3.00;
+        }
+        price += meats.size() * meatPrice;
+
+
+        double cheesePrice = 0.0;
+        if (size.equalsIgnoreCase("small")) {
+            cheesePrice = 0.75;
+        } else if (size.equalsIgnoreCase("medium")) {
+            cheesePrice = 1.50;
+        } else if (size.equalsIgnoreCase("large")) {
+            cheesePrice = 2.25;
+        }
+        price += cheeses.size() * cheesePrice;
+
+        return price;
+    }
+```
+
+
 ### removeTopping() overview
 
 - wasn't really needed for capstone but i thought it'd be cool to be able to remove a topping on a specialty pizza if someone didnt want ham on there hawaiian pizza for religious reason's.

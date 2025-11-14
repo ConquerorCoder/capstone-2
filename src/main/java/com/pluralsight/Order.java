@@ -3,8 +3,8 @@ package com.pluralsight;
 import java.util.ArrayList;
 
 public class Order {
-    private ArrayList<OrderItem> items;
-    private String customerName;
+    private final ArrayList<OrderItem> items;
+    private final String customerName;
 
     public Order(String customerName) {
         this.customerName = customerName;

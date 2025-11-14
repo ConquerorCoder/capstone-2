@@ -3,11 +3,11 @@ package com.pluralsight;
 import java.util.ArrayList;
 
 public class Pizza implements OrderItem {
-    private String size;
-    private String crustType;
-    private ArrayList<String> meats;
-    private ArrayList<String> cheeses;
-    private ArrayList<String> toppings;
+    private final String size;
+    private final String crustType;
+    private final ArrayList<String> meats;
+    private final ArrayList<String> cheeses;
+    private final ArrayList<String> toppings;
     private boolean stuffedCrust;
 
     public Pizza(String size, String crustType) {

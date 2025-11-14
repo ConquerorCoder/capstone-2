@@ -1,6 +1,6 @@
 package com.pluralsight;
 public class GarlicKnots implements OrderItem {
-    private int quantity;
+    private final int quantity;
 
     public GarlicKnots(int quantity) {
         this.quantity = quantity;
@@ -16,6 +16,7 @@ public class GarlicKnots implements OrderItem {
         return "GarlicKnots: " + quantity;
     }
 
+    @Override
     public String getDescription() {
         return quantity + " Garlic Knots";
 

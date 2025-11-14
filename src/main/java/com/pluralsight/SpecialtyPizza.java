@@ -1,8 +1,8 @@
 package com.pluralsight;
 
 public class SpecialtyPizza extends Pizza {
-    private String name;
-    private double extraCharge;
+    private final String  name;
+    private final double  extraCharge;
 
     public SpecialtyPizza(String name, String size, String crustType) {
         super(size, crustType);
