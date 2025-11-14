@@ -1,0 +1,13 @@
+Papa Christians Pizzeria
+--------------------------
+Customer: Bill
+Date/Time: 2025-11-14 10:09:23
+------------------------------------
+Margherita (medium thin crust pizza with Mozzarella, Tomatoes, Basil, Marinara, Olive Oil) $ 15.90
+1 Garlic Knots                 $  4.99
+medium Coke Drink              $  2.40
+------------------------------------
+TOTAL:                         $ 23.29
+====================================
+   Thank you for your order!
+====================================

@@ -3,8 +3,13 @@ package com.pluralsight;
 import java.util.Scanner;
 
 public class UserInterface {
-    private Scanner scanner;
-    private Order order;
+    private final Scanner scanner;
+    private final Order order;
+
+    public static final String RED = "\u001B[31m";
+    public static final String GREEN = "\u001B[32m";
+    public static final String YELLOW = "\u001B[33m";
+    public static final String RESET = "\u001B[0m";
 
     public UserInterface() {
         scanner = new Scanner(System.in);
@@ -44,7 +49,7 @@ public class UserInterface {
 
     private int getIntInput() {
         while (!scanner.hasNextInt()) {
-            System.out.print("Invalid input. Enter a number: ");
+            System.out.print(RED + "Invalid input. Enter a number: ");
             scanner.next();
         }
         int num = scanner.nextInt();
@@ -91,7 +96,7 @@ public class UserInterface {
             }
 
 
-            System.out.println(name + " pizza added!");
+            System.out.println(GREEN + name + " pizza added!");
         }
         else if (choice == 2) {
             System.out.print("Enter size (small, medium, large): ");
@@ -118,7 +123,7 @@ public class UserInterface {
             } while (!topping.equalsIgnoreCase("ok"));
 
             order.addPizza(pizza);
-            System.out.println("Custom pizza added!");
+            System.out.println(GREEN + "Custom pizza added!");
         }
     }
     private void customizePizza(Pizza pizza) {
@@ -139,7 +144,7 @@ public class UserInterface {
                 System.out.print("Enter topping to remove: ");
                 String topping = scanner.nextLine();
                 pizza.removeTopping(topping);
-                System.out.println(topping + " removed!");
+                System.out.println(RED + topping + " removed!");
             }
         } while (!action.equalsIgnoreCase("ok"));
     }
@@ -163,7 +168,7 @@ public class UserInterface {
             Drink drink = new Drink(size, flavor);
             order.addItem(drink);
 
-            System.out.println("Drink added!");
+            System.out.println(GREEN + "Drink added!");
     }
     private void checkout() {
         System.out.println("CHECKOUT RECEIPT: ");
@@ -173,7 +178,7 @@ public class UserInterface {
         System.out.println("------------------------------------");
         System.out.printf("TOTAL: $%.2f\n", order.getTotalPrice());
         System.out.println("====================================");
-        System.out.println("Thank you for ordering, " + order.getCustomerName() + "!");
+        System.out.println(GREEN + "Thank you for ordering, " + order.getCustomerName() + "!");
 
         ReceiptWriter writer = new ReceiptWriter();
         writer.saveReceipt(order);

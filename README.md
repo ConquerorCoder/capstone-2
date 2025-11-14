@@ -189,3 +189,17 @@ public void removeTopping(String topping) {
         }
     }
 }
+```
+## ⭐ Interesting Code part 2
+ # added anscii art to the user interface!
+-When an order is added the whole display turns green for aesthetics, turns all red when there is an error
+(also for aesthetics but a sign something is wrong)... etc!
+ ```java
+    public static final String RED = "\u001B[31m";
+    public static final String GREEN = "\u001B[32m";
+    public static final String YELLOW = "\u001B[33m";
+    public static final String RESET = "\u001B[0m";
+```
+- example of addition of (GREEN) to println
+```java 
+System.out.println(GREEN + "Custom pizza added!");
