@@ -82,7 +82,7 @@ Each specialty pizza has its own **extraCharge**, added to the final price.
 - Stored automatically in:
 
 ----
-## UML DIAGRAM
+## UML Class Diagram SS
 <img src="Images/Screenshot 2025-11-13 at 10.50.59 PM.png" style="height: 400px; width: 570px" >
 
 
@@ -203,3 +203,6 @@ public void removeTopping(String topping) {
 - example of addition of (GREEN) to println
 ```java 
 System.out.println(GREEN + "Custom pizza added!");
+```
+## Project board link ⭐
+https://github.com/ConquerorCoder/capstone-2/projects?query=is%3Aopen
