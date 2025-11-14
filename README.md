@@ -191,7 +191,18 @@ public void removeTopping(String topping) {
 }
 ```
 ## ⭐ Interesting Code part 2
- # added anscii art to the user interface!
+ # added anscii & ascii art to the user interface!
+-The welcome sign for Papa Christians is done in ascii art for aesthetics and improved ui experience!
+```                                                                                                                                                
+▖  ▖    ▝▜                       ▗          ▗▄▄                  ▗▄ ▐        ▝       ▗   ▝                  ▗▄▄  ▝                   ▝       ▗  
+▌▐ ▌ ▄▖  ▐   ▄▖  ▄▖ ▗▄▄  ▄▖     ▗▟▄  ▄▖     ▐ ▝▌ ▄▖ ▗▄▖  ▄▖     ▗▘ ▘▐▗▖  ▖▄ ▗▄   ▄▖ ▗▟▄ ▗▄   ▄▖ ▗▗▖  ▄▖     ▐ ▝▌▗▄  ▗▄▄ ▗▄▄  ▄▖  ▖▄ ▗▄   ▄▖  ▐  
+▘▛▌▌▐▘▐  ▐  ▐▘▝ ▐▘▜ ▐▐▐ ▐▘▐      ▐  ▐▘▜     ▐▄▟▘▝ ▐ ▐▘▜ ▝ ▐     ▐   ▐▘▐  ▛ ▘ ▐  ▐ ▝  ▐   ▐  ▝ ▐ ▐▘▐ ▐ ▝     ▐▄▟▘ ▐    ▞   ▞ ▐▘▐  ▛ ▘ ▐  ▝ ▐  ▐  
+▐▌█▘▐▀▀  ▐  ▐   ▐ ▐ ▐▐▐ ▐▀▀      ▐  ▐ ▐     ▐   ▗▀▜ ▐ ▐ ▗▀▜     ▐   ▐ ▐  ▌   ▐   ▀▚  ▐   ▐  ▗▀▜ ▐ ▐  ▀▚     ▐    ▐   ▞   ▞  ▐▀▀  ▌   ▐  ▗▀▜  ▝  
+▐ ▐ ▝▙▞  ▝▄ ▝▙▞ ▝▙▛ ▐▐▐ ▝▙▞      ▝▄ ▝▙▛     ▐   ▝▄▜ ▐▙▛ ▝▄▜      ▚▄▘▐ ▐  ▌  ▗▟▄ ▝▄▞  ▝▄ ▗▟▄ ▝▄▜ ▐ ▐ ▝▄▞     ▐   ▗▟▄ ▐▄▄ ▐▄▄ ▝▙▞  ▌  ▗▟▄ ▝▄▜  ▐  
+                                                    ▐                                                                                           
+                                                    ▝                                          
+```                                                    
+
 -When an order is added the whole display turns green for aesthetics, turns all red when there is an error
 (also for aesthetics but a sign something is wrong)... etc!
  ```java
