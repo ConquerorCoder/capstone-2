@@ -33,8 +33,21 @@ public class SpecialtyPizza extends Pizza {
             addTopping("Mozzarella");
             addTopping("Marinara");
             extraCharge = 3.00;
-        }
-        else {
+        } else if (name.equalsIgnoreCase("BBQ Chicken")) {
+            addTopping("Ham");
+            addTopping("Chicken");
+            addTopping("BBQ");
+            addTopping("Mozzarella");
+            addTopping("Marinara");
+            extraCharge = 2.00;
+        } else if (name.equalsIgnoreCase("Hawaiian Pizza")) {
+            addTopping("Pineapple");
+            addTopping("Ham");
+            addTopping("Chicken");
+            addTopping("Mozzarella");
+            addTopping("Marinara");
+            extraCharge = 2.00;
+        } else {
             extraCharge = 0.00;
             System.out.println("Unknown specialty pizza: " + name);
         }

@@ -19,12 +19,12 @@ public class UserInterface {
         int choice;
         do {
             System.out.println("Welcome To Papa Christians Pizzeria :} ");
-            System.out.println("1) Add Pizza");
-            System.out.println("2) Add Garlic Knots");
-            System.out.println("3) Add Drink");
-            System.out.println("4) View Order");
-            System.out.println("5) Checkout");
-            System.out.println("0) Exit");
+            System.out.println("1) \uD83C\uDF55Add Pizza");
+            System.out.println("2) \uD83E\uDD56Add Garlic Knots");
+            System.out.println("3) \uD83E\uDDCBAdd Drink");
+            System.out.println("4) \uD83E\uDDFEView Order");
+            System.out.println("5) \uD83D\uDED2Checkout");
+            System.out.println("0) \uD83D\uDCA8Exit");
             System.out.print("Enter your choice: ");
 
             choice = getIntInput();
@@ -54,21 +54,25 @@ public class UserInterface {
 
     private void addPizza() {
         System.out.println("Would you like:");
-        System.out.println("1) Specialty Pizza");
-        System.out.println("2) Custom Pizza");
+        System.out.println("1) \uD83C\uDF1FSpecialty Pizza");
+        System.out.println("2) \uD83E\uDEF5\uD83C\uDFFBCustom Pizza");
         int choice = getIntInput();
 
         if (choice == 1) {
             System.out.println("Choose a Specialty Pizza:");
-            System.out.println("1) Margherita");
-            System.out.println("2) Veggie");
-            System.out.println("3) Meat Lovers");
+            System.out.println("1) \uD83E\uDDC0Margherita");
+            System.out.println("2) \uD83E\uDD6CVeggie");
+            System.out.println("3) \uD83E\uDD53Meat Lovers");
+            System.out.println("4) \uD83C\uDF57BBQ Chicken");
+            System.out.println("5) \uD83C\uDF34Hawaiian Pizza");
             int typeChoice = getIntInput();
 
             String name;
             if (typeChoice == 1) name = "Margherita";
             else if (typeChoice == 2) name = "Veggie";
-            else name = "Meat Lovers";
+            else if (typeChoice == 3) name = "Meat Lovers";
+            else if (typeChoice == 4) name = "BBQ Chicken";
+            else name = "Hawaiian Pizza";
 
             System.out.print("Enter size (small, medium, large): ");
             String size = scanner.nextLine();

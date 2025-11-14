@@ -1,1 +1,134 @@
-# Papa Christian’s Pizzeria 🍕
+<h1 align="center">🍕 Papa Christian’s Pizzeria </h1>
+
+<div align="center">
+  <img src="Images/Gemini_Generated_Image_5c5pms5c5pms5c5p.PNG" style="height: 350px; width: 270px" >
+  </div>
+
+<b><i>Italian Finest Mixed With Southern Genius</i></b><br>
+<sub>"Better Pizza, Papa Christian"</sub> 
+<br><br>
+
+  
+
+---
+
+## 📖 Description
+
+Papa Christian’s Pizzeria is a **Java console-based food ordering application** that lets customers:
+
+- Build fully custom pizzas
+- Order specialty pizzas with preset toppings
+- Add drinks
+- Add garlic knots
+- Customize toppings (add/remove)
+- Generate a **printable receipt** saved to your receipts folder
+
+This project demonstrates **Object-Oriented Programming**, **inheritance**, **interfaces**, and **file writing**.  
+The program flow was intentionally designed to feel like a real ordering experience inside a terminal.
+
+---
+The system also includes:
+- A **receipt generator** that saves timestamped receipts to  
+  `src/main/resources/receipts/`
+- A **customization system** allowing the user to add or remove toppings
+- A clean ordering menu with checkout confirmation
+
+---
+
+## ⭐ Features
+
+### 🍕 **Custom Pizzas**
+- Choose size (small, medium, large)
+- Choose crust type
+- Add unlimited toppings:
+    - Meats
+    - Cheeses
+    - Veggies
+- Optionally add **stuffed crust**
+- Dynamically calculated pricing based on size & toppings
+
+---
+
+### ⭐ **Specialty Pizzas**
+Preset pizzas include:
+- **Margherita**
+- **Veggie**
+- **Meat Lovers**
+- **BBQ Chicken**
+- **Hawaiian Pizza**
+
+Each includes preset toppings AND can still be customized:
+- Add toppings
+- Remove toppings
+
+Each specialty pizza has its own **extraCharge**, added to the final price.
+
+---
+
+### 🧄 **Garlic Knots**
+- Input quantity
+- Automatically multiplies quantity × price
+
+---
+
+### 🥤 **Drinks**
+- Choose flavor
+- Choose size (S / M / L)
+
+---
+
+### 🧾 **Receipt Generation**
+- Every order generates a professionally formatted receipt
+- Stored automatically in:
+
+----
+## UML DIAGRAM
+<img src="Images/Screenshot 2025-11-13 at 10.50.59 PM.png" style="height: 400px; width: 570px" >
+
+
+
+---
+## Loading Screenshot Steps:
+### Loading screen demo
+<img src="Images/Screenshot 2025-11-13 at 11.01.32 PM.png" style="height: 133px; width: 4777px" >
+
+### Specialty pizza demo
+<img src="Images/Screenshot 2025-11-13 at 11.02.42 PM.png" style="height: 133px; width: 4777px" >
+
+### Checkout demo
+<img src="Images/Screenshot 2025-11-13 at 11.06.05 PM.png" style="height: 133px; width: 440px" >
+
+---
+### Receipt demo
+<img src="Images/Screenshot 2025-11-13 at 11.30.02 PM.png" style="height: 220px; width: 600px" >
+
+---
+### removeTopping() overview
+
+- wasn't really needed for capstone but i thought it'd be cool to be able to remove a topping on a specialty pizza if someone didnt want ham on there hawaiian pizza for religious reason's.
+
+### `removeTopping(String topping)`
+
+Removes a specified topping from the `meats`, `cheeses`, and `toppings` lists. The removal is case-insensitive.
+
+```java
+public void removeTopping(String topping) {
+    for (int i = 0; i < meats.size(); i++) {
+        if (meats.get(i).equalsIgnoreCase(topping)) {
+            meats.remove(i);
+            i--;
+        }
+    }
+    for (int i = 0; i < cheeses.size(); i++) {
+        if (cheeses.get(i).equalsIgnoreCase(topping)) {
+            cheeses.remove(i);
+            i--;
+        }
+    }
+    for (int i = 0; i < toppings.size(); i++) {
+        if (toppings.get(i).equalsIgnoreCase(topping)) {
+            toppings.remove(i);
+            i--;
+        }
+    }
+}
