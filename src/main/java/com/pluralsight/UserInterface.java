@@ -23,6 +23,14 @@ public class UserInterface {
     public void displayMenu() {
         int choice;
         do {
+            System.out.println("                                                                                                                                                \n" +
+                            "▖  ▖    ▝▜                       ▗          ▗▄▄                  ▗▄ ▐        ▝       ▗   ▝                  ▗▄▄  ▝                   ▝       ▗  \n" +
+                            "▌▐ ▌ ▄▖  ▐   ▄▖  ▄▖ ▗▄▄  ▄▖     ▗▟▄  ▄▖     ▐ ▝▌ ▄▖ ▗▄▖  ▄▖     ▗▘ ▘▐▗▖  ▖▄ ▗▄   ▄▖ ▗▟▄ ▗▄   ▄▖ ▗▗▖  ▄▖     ▐ ▝▌▗▄  ▗▄▄ ▗▄▄  ▄▖  ▖▄ ▗▄   ▄▖  ▐  \n" +
+                            "▘▛▌▌▐▘▐  ▐  ▐▘▝ ▐▘▜ ▐▐▐ ▐▘▐      ▐  ▐▘▜     ▐▄▟▘▝ ▐ ▐▘▜ ▝ ▐     ▐   ▐▘▐  ▛ ▘ ▐  ▐ ▝  ▐   ▐  ▝ ▐ ▐▘▐ ▐ ▝     ▐▄▟▘ ▐    ▞   ▞ ▐▘▐  ▛ ▘ ▐  ▝ ▐  ▐  \n" +
+                            "▐▌█▘▐▀▀  ▐  ▐   ▐ ▐ ▐▐▐ ▐▀▀      ▐  ▐ ▐     ▐   ▗▀▜ ▐ ▐ ▗▀▜     ▐   ▐ ▐  ▌   ▐   ▀▚  ▐   ▐  ▗▀▜ ▐ ▐  ▀▚     ▐    ▐   ▞   ▞  ▐▀▀  ▌   ▐  ▗▀▜  ▝  \n" +
+                            "▐ ▐ ▝▙▞  ▝▄ ▝▙▞ ▝▙▛ ▐▐▐ ▝▙▞      ▝▄ ▝▙▛     ▐   ▝▄▜ ▐▙▛ ▝▄▜      ▚▄▘▐ ▐  ▌  ▗▟▄ ▝▄▞  ▝▄ ▗▟▄ ▝▄▜ ▐ ▐ ▝▄▞     ▐   ▗▟▄ ▐▄▄ ▐▄▄ ▝▙▞  ▌  ▗▟▄ ▝▄▜  ▐  \n" +
+                            "                                                    ▐                                                                                           \n" +
+                            "                                                    ▝                                                                                           ");
             System.out.println("Welcome To Papa Christians Pizzeria :} ");
             System.out.println("1) \uD83C\uDF55Add Pizza");
             System.out.println("2) \uD83E\uDD56Add Garlic Knots");
